@@ -60,13 +60,8 @@ def visualize_with_late_products(df):
         if row["Late Product"]:
             ax1.text(i, row["Delivery Time (Days)"] + 0.2, "Late", color="red", ha="center", fontsize=10, fontweight="bold")
 
-    # Adding legends
-    ax1.legend(loc="upper left", bbox_to_anchor=(0, 1), title="KPIs")
-    ax2.legend(loc="upper left", bbox_to_anchor=(0.15, 1), title="KPIs")
-    ax3.legend(loc="upper left", bbox_to_anchor=(0.3, 1), title="KPIs")
-    ax4.legend(loc="upper left", bbox_to_anchor=(0.45, 1), title="KPIs")
-
-    fig.tight_layout()
+    # Save the chart as an image
+    plt.savefig("product_kpi_chart.png")
     plt.show()
 
 if __name__ == "__main__":
